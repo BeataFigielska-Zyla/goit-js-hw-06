@@ -19,10 +19,10 @@ const images = [
 // Ulepsz galerię używając flexboxów lub gridów poprzez klasy CSS.
 
 const galleryList = document.querySelector("ul.gallery");
-const galleryMarkup = images.map(image => 
+const galleryHTML = images.map(image => 
   `<li class="gallery-item">
     <img src="${image.url}" alt="${image.alt}">
   </li>`
 ).join("");
 
-galleryList.insertAdjacentHTML("beforeend", galleryMarkup);
+galleryList.insertAdjacentHTML("beforeend", galleryHTML);
