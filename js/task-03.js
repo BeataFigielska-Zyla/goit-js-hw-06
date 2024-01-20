@@ -12,3 +12,17 @@ const images = [
     alt: 'Group of Horses Running',
   },
 ];
+
+// Użyj tablicy obiektów images w celu utworzenia elementów <img> umieszczonych w <li>. Aby utworzyć znacznik użyj template strings i metody insertAdjacentHTML().
+
+// Wszystkie elementy galerii powinny być dodawane do DOM podczas jednej operacji.
+// Ulepsz galerię używając flexboxów lub gridów poprzez klasy CSS.
+
+const galleryList = document.querySelector("ul.gallery");
+const galleryMarkup = images.map(image => 
+  `<li class="gallery-item">
+    <img src="${image.url}" alt="${image.alt}">
+  </li>`
+).join("");
+
+galleryList.insertAdjacentHTML("beforeend", galleryMarkup);
