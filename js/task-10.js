@@ -39,6 +39,10 @@ function getRandomHexColor() {
 
   function destroyBoxes() {
     boxesContainer.innerHTML = '';
+
+    // wyczyszczenie input :)
+
+    document.querySelector('input').value = ''; 
   }
 
   createButton.addEventListener('click', function createDiv() {
@@ -56,3 +60,4 @@ function getRandomHexColor() {
 destroyButton.addEventListener('click', function destroyDiv() {
   destroyBoxes();
 });
+
